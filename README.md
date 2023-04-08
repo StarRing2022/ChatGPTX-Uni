@@ -4,3 +4,7 @@
 
 To Do
 如您对我们的工作产生兴趣，请加入我们的QQ群号：731968085
+
+真挚致谢：
+ChatRWKV:https://github.com/BlinkDL/ChatRWKV
+ChatGLM:ttps://github.com/THUDM/ChatGLM-6B 
