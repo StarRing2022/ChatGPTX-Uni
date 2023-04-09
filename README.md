@@ -2,7 +2,7 @@
 # Can lora weights be used Exchange-Fusion in different large language models?
 # lora权值可以在不同的大语言模型间交叉融合使用吗？
 
-## 介绍（introduce）
+## 介绍（Introduce）
 
 ## 方法（Method）
 
