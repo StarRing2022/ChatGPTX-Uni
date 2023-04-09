@@ -13,9 +13,6 @@ else:
 torch.set_default_tensor_type(torch.cuda.HalfTensor)
 model = AutoModel.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True, device_map='auto')
 
-
-#model = PeftModel.from_pretrained(model, "mymusise/chatGLM-6B-alpaca-lora")
-#model = PeftModel.from_pretrained(model, "mymusise/chatglm-6b-alpaca-zh-en-lora")
 model = PeftModel.from_pretrained(model, "./lora-alpaca")
 torch.set_default_tensor_type(torch.cuda.FloatTensor)
 
