@@ -1,6 +1,6 @@
 # ChatGLM-Uni
 # Can lora weights be used Exchange-Fusion in different large language models?
-# lora权值能在不同的大语言模型间交叉融合使用吗？
+# lora能在不同的大语言模型间交叉融合使用吗？
 
 ## 介绍（Introduce）
 
