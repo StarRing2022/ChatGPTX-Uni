@@ -21,7 +21,7 @@ The initial start of the project can use the weights trained by LLAMA Alpaca for
 ## 共创共赢(Join This Work)
 If you are interested in our work, please give "Fork" or "Star" your attention and support. We will be grateful much, or contact us. QR code:<br>
 如您对我们的工作产生兴趣，请给予小星星Star关注和支持，我们将不尽感激，或与我们联系，QQ群二维码：<br>
-![Contact](resources/QQgroup.jpg)
+<img src="resources/QQgroup.jpg" width="150px">
 
 
 ## 致谢(Acknowledgments)
