@@ -8,9 +8,9 @@
 
 ## 实验环境(Trial Environment)
 
-## 实验结果(Trila Result)
+## 实验结果(Trial Result)
 
-## 结论与后续课题(Conclusion and future work)
+## 结论与后续课题(Conclusion and Future Work)
 
 
 ## 更新日志(Update Log)
