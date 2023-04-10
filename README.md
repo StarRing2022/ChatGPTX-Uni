@@ -8,25 +8,39 @@
 ## 方法（Method）
 
 ## 实验环境(Trial Environment)
+The main environment is as follows:<br>
+Win10+Python310+Pytorch1.31+Cuda11.6<br>
+Transformer (ChatGlm is using version 4.27.1, and pip3 is also installed. However, if you want to better use the LLAMA+Peft solution, it is recommended to use version 4.28, which can be downloaded from the official website or our warehouse)<br>
+PEFT (0.2.0, already placed in this warehouse)<br>
+Note: The pre training model of ChatGLM-6B has undergone changes compared to before on April 7, 2023, mainly in the VOCAB configuration and sub bin files of 01 and 08. It is recommended to use the new version of the pre training model. This warehouse stores a copy that supports Lora fusion.<br>
+
+主要环境如下：<br>
+Win10+Python310+Pytorch1.31+Cuda11.6<br>
+Transformer(ChatGlm使用的是4.27.1版本，而pip3安装的也是，但如果想更好地使用LLAMA+Peft方案，建议使用4.28版本，可至官网，或本仓库内下载)<br>
+PEFT(0.2.0，已放入本仓库)<br>
+注意：ChatGLM-6B的预训练模型在2023.04.07较以往有变动，主要在vocab配置和01、08的子bin文件上，建议使用新版预训练模型。本仓库存储了一份支持Lora融合的复本。<br>
 
 ## 实验结果(Trial Result)
+We found that ChatGlm-6B, mixed with Lora weight files, achieved the expected results in multiple text tasks such as comprehension, summarization, and continuation. The results show that using Lora weights from models with larger parameter values and incorporating the base of models with smaller parameter values can achieve more ideal results for models with smaller parameter values.<br>
 我们发现经Lora权值文件混合的ChatGlm-6B，在理解、总结、续写等多个文本任务，均取得预期成效。结果表明，使用参数量较大模型的Lora权值，融入参数量较小模型的底座，能够使得参数量较小的模型效果得到更为理想的效果。<br>
 ![contact](resources/result.jpg)
 
 ## 讨论(Discussion)
+We also noticed that LLAMA and ChatGLM use vastly different basic corpora (especially languages), and some people are concerned that this Alpaca lora approach may actually result in a decrease in the performance of ChatGLM in Chinese. In fact, this is not a problem caused by Lora weight cross fusion. Of course, we suggest that when choosing a new dataset, try to use the language you need (such as the Chinese Alpaca dataset), but this will not backfire. ChatRWKV testers report that the large model has amazing language structure learning and generalization ability, using only 1% Chinese corpus and 99% English corpus, and the model actually achieves "interoperability" in understanding Chinese and English. However, the reason why we recommend the language of the dataset is because the Lora weights will be mixed in Chinese and English after being assembled into the base, which is an easy problem to solve. You just need to tell it, 'Answer me in Chinese', and that's it.<br>
 我们也注意到，LLAMA和ChatGLM由于所使用的基本语料（尤其是语言）大相径庭，有人担忧这种以Alpaca lora的方式，会反而使用ChatGLM中文性能下降。其实，这并不是Lora权值交叉融合造成的问题，当然我们建议，在选用新数据集时，尽量选用自己需要的语言（如中文Alpaca数据集），但这并不会让适得其反.ChatRWKV的测试者报告，大模型具有惊人的语言结构学习和泛化能力，仅使用1%的中文语料+99%的英文语料，模型反而对中英文理解达到“互通”。不过，我们之所以建议数据集的语种，是因为Lora权值在组装进底座后，会存在“中英文混用”，这个问题很容易解决，你只要告诉它，“用中文回答我”，就可以了。
 
 ## 结论与后续课题(Conclusion and Future Work)
+This study preliminarily attempts to use the peft fine-tuning library to construct interaction bridges for ChatGpt class large language models of different types, volumes, and configurations through the Lora weight fusion method. Our experiment selected ChatGlm-6B as the base small model, while the slightly larger LLAMA-7B was translated into Chinese into the Alpaca dataset, and the Lora weights obtained by the Lora method were used as components. Finally, the Lora weights were integrated into ChatGlm-6B, and preliminary results showed that this technical approach achieved satisfactory results. Subsequently, we also found that the Lora weight cross fusion strategy has excellent transfer ability, and its robustness is also excellent due to its reliance on a powerful Peft library.<br>
 本研究初步尝试利用peft微调库，通过Lora权值融合的方法，构造起不同种类、不同体积、不同配置的ChatGpt类大语言模型的交互桥梁。我们的实验选取了ChatGlm-6B为底座小模型，而以稍大些的LLAMA-7B经中文翻译Alpaca数据集，使用Lora方法得到的Lora权值作为组件，最后将该Lora权值整合进ChatGlm-6B，初步来看，该技术手段取得了令人满意的功效。随后，我们还发现，Lora权值交叉融合策略，具有极好的迁移能力，再者因依托于强大的Peft库，因而鲁棒性也比较优异。
 
 ## 更新日志(Update Log)
 2023-04-10<br>
-We were pleasantly surprised to find that the Lora fusion method has a more widespread application range than we had anticipated. Therefore, in the published web version, LLAMA-13B trained by Alpaca has been grafted and assembled into ChatGLM-6B.
-我们惊喜地发现，Lora融合法的适用范围比我们预想的更为普遍，因而在发布的网页版中，已将由Alpaca训练的LLAMA-13B，嫁接组装进ChatGLM-6B中.<br><br>
+We were pleasantly surprised to find that the Lora fusion method has a more widespread application range than we had anticipated. Therefore, in the published web version, LLAMA-13B trained by Alpaca has been grafted and assembled into ChatGLM-6B.<br>
+我们惊喜地发现，Lora融合法的适用范围比我们预想的更为普遍，因而在发布的网页版中，已将由Alpaca训练的LLAMA-13B，嫁接组装进ChatGLM-6B中。<br><br>
 
 2023-04-09<br>
 The initial start of the project can use the weights trained by LLAMA Alpaca for ChatGlm. Compared to LLAMA, ChatGlm has a smaller model size and deployment cost, which is close to the effect of LLAMA, especially in terms of English performance.<br>
-工程初步启动，可使用LLAMA Alpaca训练的权值，用于ChatGlm，相比LLAMA，ChatGlm以更小的模型体积和部署成本，接近于LLAMA的效果，尤其在英文的表现上.<br><br>
+工程初步启动，可使用LLAMA Alpaca训练的权值，用于ChatGlm，相比LLAMA，ChatGlm以更小的模型体积和部署成本，接近于LLAMA的效果，尤其在英文的表现上。<br><br>
 
 ## 共创共赢(Join This Work)
 If you are interested in our work, please give "Fork" or "Star" your attention and support. We will be grateful much, or contact us. QR code:<br>
