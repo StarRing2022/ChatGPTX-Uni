@@ -1,1 +1,1 @@
-
+由于chatglm本身也在更新，而之前发现会因为attention_mask参数导致报错，此处也会根据chatglm进行更新，一般存放能够使Lora融合稳定的版本
