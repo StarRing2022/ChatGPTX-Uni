@@ -25,7 +25,7 @@ PEFT(0.2.0，已放入本仓库)<br>
 ## 实验结果(Trial Result)
 We found that ChatGlm-6B, mixed with Lora weight files, achieved the expected results in multiple text tasks such as comprehension, summarization, and continuation. The results show that using Lora weights from models with larger parameter values and incorporating the base of models with smaller parameter values can achieve more ideal results for models with smaller parameter values.<br>
 我们发现经Lora权值文件混合的ChatGlm-6B，在理解、总结、续写等多个文本任务，均取得预期成效。结果表明，使用参数量较大模型的Lora权值，融入参数量较小模型的底座，能够使得参数量较小的模型效果得到更为理想的效果。<br>
-![result](resources/result.jpg)
+![result](resources/result.png)
 
 ## 讨论(Discussion)
 We also noticed that LLAMA and ChatGLM use vastly different basic corpora (especially languages), and some people are concerned that this Alpaca lora approach may actually result in a decrease in the performance of ChatGLM in Chinese. In fact, this is not a problem caused by Lora weight cross fusion. Of course, we suggest that when choosing a new dataset, try to use the language you need (such as the Chinese Alpaca dataset), but this will not backfire. ChatRWKV testers report that the large model has amazing language structure learning and generalization ability, using only 1% Chinese corpus and 99% English corpus, and the model actually achieves "interoperability" in understanding Chinese and English. However, the reason why we recommend the language of the dataset is because the Lora weights will be mixed in Chinese and English after being assembled into the base, which is an easy problem to solve. You just need to tell it, 'Answer me in Chinese', and that's it.<br>
