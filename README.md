@@ -10,10 +10,10 @@
 ## 实验环境(Trial Environment)
 
 ## 实验结果(Trial Result)
-我们发现经Lora权值文件混合的ChatGlm-6B，在理解、总结、续写等多个文本任务，均取得预期成效。结果表明，使用参数量较大模型的Lora权值，融入参数量较小模型的底座，能够使得参数量较小的模型效果得到更为理想的效果。
+我们发现经Lora权值文件混合的ChatGlm-6B，在理解、总结、续写等多个文本任务，均取得预期成效。结果表明，使用参数量较大模型的Lora权值，融入参数量较小模型的底座，能够使得参数量较小的模型效果得到更为理想的效果。<br>
 ![contact](resources/result.jpg)
 
-## 讨论(Trial Result)
+## 讨论(Discussion)
 我们也注意到，LLAMA和ChatGLM由于所使用的基本语料（尤其是语言）大相径庭，有人担忧这种以Alpaca lora的方式，会反而使用ChatGLM中文性能下降。其实，这并不是Lora权值交叉融合造成的问题，当然我们建议，在选用新数据集时，尽量选用自己需要的语言（如中文Alpaca数据集），但这并不会让适得其反.ChatRWKV的测试者报告，大模型具有惊人的语言结构学习和泛化能力，仅使用1%的中文语料+99%的英文语料，模型反而对中英文理解达到“互通”。不过，我们之所以建议数据集的语种，是因为Lora权值在组装进底座后，会存在“中英文混用”，这个问题很容易解决，你只要告诉它，“用中文回答我”，就可以了。
 
 ## 结论与后续课题(Conclusion and Future Work)
@@ -21,7 +21,7 @@
 
 ## 更新日志(Update Log)
 2023-04-10<br>
-
+We were pleasantly surprised to find that the Lora fusion method has a more widespread application range than we had anticipated. Therefore, in the published web version, LLAMA-13B trained by Alpaca has been grafted and assembled into ChatGLM-6B.
 我们惊喜地发现，Lora融合法的适用范围比我们预想的更为普遍，因而在发布的网页版中，已将由Alpaca训练的LLAMA-13B，嫁接组装进ChatGLM-6B中.<br><br>
 
 2023-04-09<br>
