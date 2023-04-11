@@ -59,3 +59,5 @@ If you are interested in our work, please give "Fork" or "Star" your attention a
 [1]ChatRWKV:https://github.com/BlinkDL/ChatRWKV<br>
 [2]ChatGLM:https://github.com/THUDM/ChatGLM-6B<br>
 [3]Alpaca:https://github.com/tatsu-lab/stanford_alpaca<br>
+[4]peft:https://github.com/huggingface/peft<br>
+[5]ChatGLM-Tuning:https://github.com/mymusise/ChatGLM-Tuning<br>
