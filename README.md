@@ -65,3 +65,4 @@ If you are interested in our work, please give "Fork" or "Star" your attention a
 [3]Alpaca:https://github.com/tatsu-lab/stanford_alpaca<br>
 [4]peft:https://github.com/huggingface/peft<br>
 [5]ChatGLM-Tuning:https://github.com/mymusise/ChatGLM-Tuning<br>
+[6]Vicuna:https://github.com/Facico/Chinese-Vicuna<br>
