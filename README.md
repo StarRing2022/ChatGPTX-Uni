@@ -37,9 +37,13 @@ This study preliminarily attempts to use the peft fine-tuning library to constru
 本研究初步尝试利用peft微调库，通过Lora权值融合的方法，构造起不同种类、不同体积、不同配置的ChatGpt类大语言模型的关联区域。我们的实验选取了ChatGlm-6B为底座小模型，而以稍大些的LLAMA-7B经中文翻译Alpaca数据集，使用Lora方法得到的Lora权值作为组件，最后将该Lora权值整合进ChatGlm-6B，初步来看，该技术手段取得了令人满意的功效。随后，我们还发现，Lora权值交叉融合策略，具有极好的迁移能力，再者因依托于强大而稳定的Peft库，因而鲁棒性也比较优异。后续，我们将继续在不同的数据集上获得Lora权值，并不仅仅限于“LLAMA Lora+ChatGLM预训练模型”这种范式。与此同步地，正如前文所言，我们会进一步公布有关指令数据集的研究，如有条件则会加入类脑计算组件，希冀推动小语言模型（SLM）的“智能涌现”进展。
 
 ## 更新日志(Update Log)
+2023-04-12<br>
+Add the Lora weight file obtained using the vicuna-13B method.<br>
+添加使用vicuna-13B方法得到的Lora权值文件。<br><br>
+
 2023-04-11<br>
-Add the Lora weight file obtained using the vicuna method.<br>
-添加使用vicuna方法得到的Lora权值文件。<br><br>
+Add the Lora weight file obtained using the vicuna-7B method.<br>
+添加使用vicuna-7B方法得到的Lora权值文件。<br><br>
 
 2023-04-10<br>
 We were pleasantly surprised to find that the Lora fusion method has a more widespread application range than we had anticipated. Therefore, in the published web version, LLAMA-13B trained by Alpaca has been grafted and assembled into ChatGLM-6B.<br>
