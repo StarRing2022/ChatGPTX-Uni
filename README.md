@@ -27,8 +27,8 @@ PEFT(0.2.0，已放入本仓库)<br>
 注意：ChatGLM-6B的预训练模型在2023.04.07较以往有变动，主要在vocab配置和01、08的子bin文件上，建议使用新版预训练模型。本仓库存储了一份支持Lora融合的复本。<br>
 
 数据集：
-英文原版Alpaca（引用于 ）
-中文机器翻译Alpaca(引用于 https://github.com/LC1332/Chinese-alpaca-lora)
+英文原版Alpaca（引用于 https://github.com/THUDM/ChatGLM-6B/issues/599） <br>
+中文机器翻译Alpaca(引用于 https://github.com/LC1332/Chinese-alpaca-lora) <br>
 
 ## 4.实验结果(Trial Result)
 We found that ChatGlm-6B, mixed with Lora weight files, achieved the expected results in multiple text tasks such as comprehension, summarization, and continuation. The results show that using Lora weights from models with larger parameter values and incorporating the base of models with smaller parameter values can achieve more ideal results for models with smaller parameter values.<br>
