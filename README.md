@@ -15,16 +15,17 @@ This study proposes a Lora fine-tuning method suitable for ChatGPT class large l
 
 ## 3.实验环境与实验开展(Trial Environment and Perform)
 The main environment is as follows:<br>
-Win10+Python310+Pytorch1.31+Cuda11.6<br>
+Win10+Python310+Pytorch1.13+Cuda11.6<br>
 Transformer (ChatGlm is using version 4.27.1, and pip3 is also installed. However, if you want to better use the LLAMA+Peft solution, it is recommended to use version 4.28, which can be downloaded from the official website or our warehouse)<br>
 PEFT (0.2.0, already placed in this warehouse)<br>
 Note: The pre training model of ChatGLM-6B has undergone changes compared to before on April 7, 2023, mainly in the VOCAB configuration and sub bin files of 01 and 08. It is recommended to use the new version of the pre training model. This warehouse stores a copy that supports Lora fusion.<br>
 
 主要环境如下：<br>
-Win10+Python310+Pytorch1.31+Cuda11.6<br>
+Win10+Python310+Pytorch1.13+Cuda11.6<br>
 Transformer(ChatGlm使用的是4.27.1版本，而pip3安装的也是，但如果想更好地使用LLAMA+Peft方案，建议使用4.28版本，可至官网，或本仓库内下载)<br>
 PEFT(0.2.0，已放入本仓库)<br>
 注意：ChatGLM-6B的预训练模型在2023.04.07较以往有变动，主要在vocab配置和01、08的子bin文件上，建议使用新版预训练模型。本仓库存储了一份支持Lora融合的复本。<br>
+数据集：中文机器翻译Alpaca(引用于 https://github.com/LC1332/Chinese-alpaca-lora)
 
 ## 4.实验结果(Trial Result)
 We found that ChatGlm-6B, mixed with Lora weight files, achieved the expected results in multiple text tasks such as comprehension, summarization, and continuation. The results show that using Lora weights from models with larger parameter values and incorporating the base of models with smaller parameter values can achieve more ideal results for models with smaller parameter values.<br>
@@ -61,8 +62,12 @@ If you are interested in our work, please give "Fork" or "Star" your attention a
 如您对我们的工作产生兴趣，请给予小星星Star关注和支持，我们将不尽感激，或与我们联系，QQ群二维码：<br>
 ![contact](resources/QQgroup.jpg)
 
+## 9.参与评审
+我们非常欢迎并诚挚向愿评价、提议、斧正、交流、复现的同行，发出邀请并表达谢意<br>
+现已邀请评审团成员：@ChatGLM.duzx16 ; @商汤科技.陈启源; @ChatGLM-Tuning.Chengxi Guo
 
-## 9.致谢(Acknowledgments)
+
+## 10.致谢(Acknowledgments)
 [1]ChatRWKV:https://github.com/BlinkDL/ChatRWKV<br>
 [2]ChatGLM:https://github.com/THUDM/ChatGLM-6B<br>
 [3]Alpaca:https://github.com/tatsu-lab/stanford_alpaca<br>
