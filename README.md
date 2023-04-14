@@ -67,7 +67,7 @@ If you are interested in our work, please give "Fork" or "Star" your attention a
 
 ## 9.参与评审
 我们非常欢迎并诚挚向愿评价、提议、斧正、交流、复现的同行，发出邀请并表达谢意<br>
-现已邀请评审团成员：@ChatGLM.duzx16 ; @商汤科技.陈启源; @ChatGLM-Tuning.Chengxi Guo
+现已邀请评审团成员：@商汤科技.陈启源; @ChatGLM-Tuning.Chengxi Guo
 
 
 ## 10.致谢(Acknowledgments)
