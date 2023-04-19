@@ -2,3 +2,4 @@
 后面增加的权值文件训练来源如下：
 1.adapter_model_vicuna7B
 1.adapter_model_vicuna13B
+3.adapter_model_
