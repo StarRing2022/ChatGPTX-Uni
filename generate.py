@@ -1,9 +1,10 @@
 import torch
-from peft import PeftModel
+from Ringpeft import PeftModel
 import transformers
 import gradio as gr
 
 from transformers import AutoTokenizer,  GenerationConfig, AutoModel
+from transformers import LlamaTokenizer, LlamaForCausalLM, GenerationConfig
 
 if torch.cuda.is_available():
     device = "cuda"
@@ -11,13 +12,19 @@ else:
     device = "cpu"
 
 torch.set_default_tensor_type(torch.cuda.HalfTensor)
-model = AutoModel.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True, device_map='auto')
+model1 = AutoModel.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True, device_map='auto')
+model2 = LlamaForCausalLM.from_pretrained("decapoda-research/llama-7b-hf",load_in_8bit=False,torch_dtype=torch.float16,device_map="auto")
 
-model = PeftModel.from_pretrained(model, "./lora-alpaca")
+model1 = PeftModel.from_pretrained(model, "./lora-out")
+model2 = PeftModel.from_pretrained(model, "./lora-alpaca")
 torch.set_default_tensor_type(torch.cuda.FloatTensor)
 
 
-tokenizer = AutoTokenizer.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True)
+tokenizer1 = AutoTokenizer.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True)
+tokenizer2 = LlamaTokenizer.from_pretrained("decapoda-research/llama-7b-hf")
+
+model = model1
+tokenizer = tokenizer1
 
 def generate_prompt(instruction, input=None):
     if input:
