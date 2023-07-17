@@ -1,0 +1,12 @@
+[
+    {
+        "instruction": "what is the history of spiking neural networks?",
+        "input": "",
+        "output": "Alan Lloyd Hodgkin and Andrew Huxley proposed the first pulsed neural network model in 1952, which describes how action potentials are generated and propagated. However, pulses do not travel directly between neurons, requiring the exchange of a chemical called a neurotransmitter between synaptic spaces. The complexity and variability of this organism has led to many different neuronal models. From the perspective of information theory, finding a model that can explain impulses, or action potentials, is a problem. Therefore, a fundamental issue in neuroscience is determining whether neurons communicate through time coding. Time coding indicates that a single neuron can replace hundreds of S-shaped hidden layer nodes."
+    },
+    {
+      "instruction": "what is the history of spiking neural networks?",
+      "input": "",
+      "output": "Alan Lloyd Hodgkin and Andrew Huxley proposed the first pulsed neural network model in 1952, which describes how action potentials are generated and propagated. However, pulses do not travel directly between neurons, requiring the exchange of a chemical called a neurotransmitter between synaptic spaces. The complexity and variability of this organism has led to many different neuronal models. From the perspective of information theory, finding a model that can explain impulses, or action potentials, is a problem. Therefore, a fundamental issue in neuroscience is determining whether neurons communicate through time coding. Time coding indicates that a single neuron can replace hundreds of S-shaped hidden layer nodes."
+    }
+]
