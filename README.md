@@ -7,12 +7,12 @@
 注意：Peft库新版有变动，请使用本工程的RingPeft库，其基于Peft0.2，但又添入了新版Peft的一些Lora方法。<br>
 
 2.主要代码说明：<br>
-llama-finetune.py：基于原英文Alpaca数据集，LLAMA 7B的Lora微调
-glm-finetunejsonl.py：基于test.jsonl数据集，GLM 6B的Lora微调
-cover_alpaca2jsonl.py：将json数据集转为jsonl数据集
-tokenize_dataset_rowsjsonl.py：对jsonl数据集转为transfomers的datasets文件夹
-zerofinetune.py：在不进行训练的情况下，仅使用提示工程进行微调
-generate.py：架设网页服务
+llama-finetune.py：基于原英文Alpaca数据集，LLAMA 7B的Lora微调<br>
+glm-finetunejsonl.py：基于test.jsonl数据集，GLM 6B的Lora微调<br>
+cover_alpaca2jsonl.py：将json数据集转为jsonl数据集<br>
+tokenize_dataset_rowsjsonl.py：对jsonl数据集转为transfomers的datasets文件夹<br>
+zerofinetune.py：在不进行训练的情况下，仅使用提示工程进行微调<br>
+generate.py：架设网页服务<br>
 
 3.使用：<br>
 环境：WIN10+Torch1.31+Cuda11.6<br>
